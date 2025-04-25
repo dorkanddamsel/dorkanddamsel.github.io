@@ -119,6 +119,9 @@
               <span class="blinker">:</span>
               <span class="seconds">00</span>
             </div>
+            <div class="countdown-done hide">
+              <span class="hline">Happy 25th Anniversary, Lou &amp; Erl!</span>
+            </div>
             <div class="labels">
               <span>days</span>
               <span>hours</span>
@@ -331,9 +334,63 @@
         // If the count down is finished, write some text
         if (distance < 0) {
           clearInterval(x);
+
+          $('.countdown-box .constraint').addClass('hide');
+          $('.countdown-box .labels').addClass('hide');
+          $('.countdown-box .countdown-done').removeClass('hide');
         }
       }, 1000);
     };
+
+    var slshow = ()=>{
+      var init = 1;
+      var interval = 10;
+      var perPage = 300000;
+      flipPage(perPage);
+    };
+
+    var clearAll = ()=>{
+      for(t in times) {
+        window.clearTimeout(times[t]);
+      }
+    }
+
+    var times = {
+      pg1: 0,
+      pg2: 0,
+      pg3: 0,
+      pg3p: 0,
+      pg2p: 0,
+    };
+
+    var resetPages = (perPage) => {
+      clearAll();
+      times.pg3p = window.setTimeout(()=>{
+        $('.page.main-3 .flipper.left').trigger('click');
+      },100);
+
+      times.pg2p = window.setTimeout(()=>{
+        $('.page.main-2 .flipper.left').trigger('click');
+      },1300);
+
+      window.setTimeout(()=>{
+        flipPage(perPage);
+      }, perPage);
+    };
+
+    var flipPage = (perPage)=>{
+      clearAll();
+      times.pg1 = window.setTimeout(()=>{
+        $('.page.main-1 .flipper.right').trigger('click');
+      },perPage);
+      times.pg2 = window.setTimeout(()=>{
+        $('.page.main-2 .flipper.right').trigger('click');
+      },perPage * 2);
+      times.pg3 = window.setTimeout(()=>{
+        resetPages(perPage);
+      },perPage * 3);
+    }
+
     $(()=>{
       $("#start").click(()=>{
         $("#bgmusic")[0].play();
@@ -355,6 +412,7 @@
                 $(".page.intro.loading").addClass("hide");
                 $(".newsp").removeClass('hide');
                 window.setTimeout(()=>{
+                  slshow();
                   $(".newsp").addClass('transition-show');
                 },100);
               },340);
@@ -412,6 +470,8 @@
       $('#rsvp').click(()=>{
         fetch()
       });
+
+      // slshow();
     })
   </script>
 </body>
