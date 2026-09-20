@@ -1,0 +1,173 @@
+* { margin: 0; padding: 0; font: 10px/1 "Arial"; line-height: 1; box-sizing: border-box; z-index: 1;}
+
+html, body {
+  background-image: url("../img/bg-body.png");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: 'ATime';
+  src: url('atimefont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body { position: relative; }
+
+.website-title { width: 580px; margin: 0 auto; padding-top: 180px; }
+.website-title img { width: 100%; }
+
+.context { text-align: center; width: 320px; margin: 32px auto 0; }
+.context p { font-family: "ATime", "Arial"; font-size: 32px;}
+.context p span { font-family: "Arial"!important; font-size: 32px; font-weight: 800;}
+
+.soc-med-contacts { text-align: center; width: 320px; margin: 50px auto 0; }
+.soc-med-contacts p { font-family: "ATime", "Arial"; color: #af0000; font-size: 36px; }
+.soc-med-contacts p span { font-family: "Arial"!important; font-weight: 800; color: #af0000; font-size: 36px; }
+.soc-med-contacts .buttons { display: flex; gap: 20px; margin-top: 20px; justify-content: center;}
+.soc-med-contacts .soc-med { font-family: "ATime", "Arial"; width: 120px; height: 120px; display: block; overflow: hidden; text-indent: -9999px; }
+.soc-med-contacts .soc-med.fb { background: transparent url('../img/fb-sm.png') 0 0 no-repeat; background-size: contain;}
+.soc-med-contacts .soc-med.tk { background: transparent url('../img/tk-sm.png') 0 0 no-repeat; background-size: contain; }
+.soc-med-contacts .soc-med.vb { background: transparent url('../img/vb-sm.png') 0 0 no-repeat; background-size: contain; }
+.soc-med-contacts .soc-med.wa { background: transparent url('../img/wa-sm.png') 0 0 no-repeat; background-size: contain; }
+
+.bg-for-chars {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("../img/dork-damsel.png");
+  background-size: 360px;
+  background-position: center 67vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (min-width: 376px) {
+  html, body { overflow: hidden;}
+  .website-title { width: 280px; margin: 0 auto; padding-top: 80px; }
+
+  .context { margin-top: 24px; }
+  .context p { font-size: 22px; }
+  .context p span { font-size: 22px; }
+
+  .soc-med-contacts { margin-top: 25px; }
+  .soc-med-contacts p { font-size: 24px; }
+  .soc-med-contacts p span { font-size: 24px; }
+  .soc-med-contacts .buttons { gap: 12px; margin-top: 20px; }
+  .soc-med-contacts .soc-med { width: 54px; height: 54px; }
+
+  .bg-for-chars {
+    background-size: 240px;
+  }
+}
+
+@media (min-width: 426px) {
+  html, body { overflow: hidden;}
+  .website-title { width: 320px; margin: 0 auto; padding-top: 80px; }
+
+  .context { margin-top: 24px; }
+  .context p { font-size: 22px; }
+  .context p span { font-size: 22px; }
+
+  .soc-med-contacts { margin-top: 25px; }
+  .soc-med-contacts p { font-size: 24px; }
+  .soc-med-contacts p span { font-size: 24px; }
+  .soc-med-contacts .buttons { gap: 12px; margin-top: 20px; }
+  .soc-med-contacts .soc-med { width: 54px; height: 54px; }
+
+  .bg-for-chars {
+    background-size: 240px;
+  }
+}
+
+@media (min-width: 551px) {
+  html, body { overflow: hidden;}
+  .website-title { width: 425px; margin: 0 auto; padding-top: 70px; }
+
+  .context { margin-top: 32px; }
+  .context p { font-size: 28px; }
+  .context p span { font-size: 22px; }
+
+  .soc-med-contacts { margin-top: 42px; }
+  .soc-med-contacts p { font-size: 28px; }
+  .soc-med-contacts p span { font-size: 28px; }
+  .soc-med-contacts .buttons { gap: 16px; margin-top: 20px; }
+  .soc-med-contacts .soc-med { width: 64px; height: 64px; }
+
+  .bg-for-chars {
+    background-size: 300px;
+  }
+}
+
+@media (min-width: 641px) {
+  html, body { overflow: hidden;}
+  .website-title { width: 520px; margin: 0 auto; padding-top: 80px; }
+
+  .context { margin-top: 48px; }
+  .context p { font-size: 32px; }
+  .context p span { font-size: 32px; }
+
+  .soc-med-contacts { margin-top: 62px; }
+  .soc-med-contacts p { font-size: 32px; }
+  .soc-med-contacts p span { font-size: 32px; }
+  .soc-med-contacts .buttons { gap: 20px; margin-top: 24px; }
+  .soc-med-contacts .soc-med { width: 86px; height: 86px; }
+
+  .bg-for-chars {
+    background-size: 300px;
+  }
+}
+
+@media (min-width: 801px) {
+  html, body {
+    background-image: url("../img/bg-body.png");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+  }
+
+  @font-face {
+    font-family: 'ATime';
+    src: url('atimefont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body { position: relative; }
+
+  .website-title { width: 580px; margin: 0 auto; padding-top: 180px; }
+  .website-title img { width: 100%; }
+
+  .context { text-align: center; width: 320px; margin: 32px auto 0; }
+  .context p { font-family: "ATime", "Arial"; font-size: 32px;}
+  .context p span { font-family: "Arial"!important; font-size: 32px; font-weight: 800;}
+
+  .soc-med-contacts { text-align: center; width: 320px; margin: 50px auto 0; }
+  .soc-med-contacts p { font-family: "ATime", "Arial"; color: #af0000; font-size: 36px; }
+  .soc-med-contacts p span { font-family: "Arial"!important; font-weight: 800; color: #af0000; font-size: 36px; }
+  .soc-med-contacts .buttons { display: flex; gap: 20px; margin-top: 20px; justify-content: center;}
+  .soc-med-contacts .soc-med { font-family: "ATime", "Arial"; width: 120px; height: 120px; display: block; overflow: hidden; text-indent: -9999px; }
+  .soc-med-contacts .soc-med.fb { background: transparent url('../img/fb-sm.png') 0 0 no-repeat; background-size: contain;}
+  .soc-med-contacts .soc-med.tk { background: transparent url('../img/tk-sm.png') 0 0 no-repeat; background-size: contain; }
+  .soc-med-contacts .soc-med.vb { background: transparent url('../img/vb-sm.png') 0 0 no-repeat; background-size: contain; }
+  .soc-med-contacts .soc-med.wa { background: transparent url('../img/wa-sm.png') 0 0 no-repeat; background-size: contain; }
+
+  .bg-for-chars {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("../img/dork-damsel.png");
+    background-size: 360px;
+    background-position: center 67vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
